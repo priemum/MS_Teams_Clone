@@ -1,0 +1,138 @@
+<!-- kind of a html file -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Teams Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <link rel="stylesheet" href="room.css">
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+    <script>
+        const ROOM_ID = "<%= roomId %>";
+    </script>
+</head>
+
+<body>
+
+    <div class="myButtonPanel">    
+
+        <div class=" blockForButtons sessionTimer" >
+            <i class="far fa-clock"></i>
+            <div id="sessionTime" ></div>
+        </div>
+
+        <div class="blockForButtons first">
+            <div id="myBtn" class="functionalButtons">
+                <i class="fas fa-user-plus"></i>
+                <span>Invite</span>
+             </div>
+
+            <div id="myModal" class="modal">
+
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+
+                    <div class="copy-text">                    
+                        <input type="text" class="text" value="Click to copy link to your clipboard" readonly>
+                        <button onclick="copyLink()">
+                        <i class="fa fa-clone"></i>
+                        </button>
+                    </div>     
+                    
+                    <p style="
+                    letter-spacing: 0.02em;
+                    color: #6a1b9a;
+                    font-weight: bolder;
+                    width: fit-content;
+                    margin: 10px auto;
+                    ">Share this meeting invite with others to join the room!</p>
+                    
+                                                       
+                </div>
+            
+            </div>
+
+            <!-- <div class="functionalButtons">
+               <i class="fas fa-user-friends"></i>
+               <span>Participants</span>
+            </div> -->
+
+            <div onclick="ShowChat(this)"  id="chat_Btn" class="functionalButtons" style="
+            padding-left: 8px;
+        ">
+                <i class="far fa-comment-dots"></i>
+                <span>Chat</span>
+            </div>   
+
+        </div>
+
+        <div class="blockForButtons last">
+
+            <div onclick="vidCamera()" class="functionalButtons myVidButton" >
+                <i class="fas fa-video"></i>
+                <span>Stop Video</span>
+            </div>
+
+            <div onclick="myAudio()" class="functionalButtons myMuteButton">
+                <i class="fas fa-microphone"></i>
+                <span>Mute</span>
+            </div>
+
+            <div id="share-screen" class="functionalButtons myShareButton" >
+                <i class="fas fa-share-square"></i>
+                <span>Share Screen</span>
+            </div>
+
+            <div class="functionalButtons">
+                <button type="button" class="btn btn-danger  btn-sm">
+                    
+                    <a href="/left"
+                    style="
+                    color: white;
+                    font-size: small;
+                    text-decoration:none;
+                    "  
+                    >Leave Call</a>  
+                    </button>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+
+        <div class="showChat leftHandSide">
+            <div class="videosArea">
+                <div id="video-grid">
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="showChat rightHandSide">
+            <div class="chatHeader">
+                <h6>Chat</h6>
+            </div>
+            <div class="chatsDisplayArea">
+    
+             </div>
+             <div class="typingArea">
+                <input id="chat_message" type="text" placeholder="Type a new message">
+                <i onclick="sendButton()" class="far fa-paper-plane"></i>
+             </div>
+        </div>
+    </div>
+    <script src="room.js"></script>
+</body>
+</html>
