@@ -17,15 +17,13 @@ body{
 
 video{
     height: 60vh;
-    width: 35vw;
-    object-fit: cover;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
+    width: 33%;             
 }
 
 #video-grid{
     display:flex;
     justify-content: center;
+    width: 100%;
 }
 
 .videosArea{
@@ -150,7 +148,6 @@ video{
 }
 
 .typingArea input {
-    /* flex-grow: 1; */
     flex-grow: 0.6;
     background-color: transparent;
     border: none;
@@ -234,9 +231,8 @@ video{
     top: 0;
     width: 100%; 
     height: 100%; 
-    /* overflow: auto;  */
     background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.4); 
 }
 
 .close {
@@ -262,7 +258,7 @@ video{
     width: 50%; 
 }
 
-.copy-text {
+.copyMeetLink {
     position:relative;
     padding:10px;
     padding: 2px;
@@ -272,7 +268,7 @@ video{
     display:flex;
 }
 
-.copy-text button {
+.copyMeetLink button {
     height: fit-content;
     background:#e1bee7;
     color:#4a148c;
@@ -284,7 +280,7 @@ video{
     cursor:pointer;
 }
 
-.copy-text input.text {
+.copyMeetLink input.text {
     color: #616161;
     border:none;
     outline:none;
@@ -294,10 +290,10 @@ video{
     font-size: 1.2em;
 }
 
-.copy-text button:active {
+.copyMeetLink button:active {
     background:#f3e5f5;
 }
-.copy-text button:before {
+.copyMeetLink button:before {
     content:"Copied to Clipboard";
     position:absolute;
     top:-45px;
@@ -308,7 +304,7 @@ video{
     font-size:15px;
     display:none;
 }
-.copy-text button:after {
+.copyMeetLink button:after {
     content:"";
     position:absolute;
     top:-20px;
@@ -319,8 +315,8 @@ video{
     transform:rotate(45deg);
     display:none;
 }
-.copy-text.active button:before,
-.copy-text.active button:after {
+.copyMeetLink.active button:before,
+.copyMeetLink.active button:after {
     display:block;
     padding: 5px;
 }

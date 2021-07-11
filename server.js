@@ -8,25 +8,22 @@ const { ExpressPeerServer } = require('peer');
 const peerServer = ExpressPeerServer(server, {
   debug: true
 });
-
 app.set('view engine', 'ejs');
-
 app.use(express.static('public'))
 app.use('/static', express.static(path.join(__dirname, 'public')))
-
 app.use('/peerjs', peerServer);
 
-// landing page to join meeting
+// Landing page to join meeting
 app.get("/", function(req, res){
 	res.render("landingPage");
 });
 
-// when vc ends it comes to left meeting pg
+// When video call ends, user comes to the Left Meeting Page
 app.get("/left", function(req, res){
 	res.render("leftMeeting");
 });
 
-// video calling interface
+// Redirects to the Video-Calling interface
 app.get('/join', (req, res) => {
     res.redirect(`/${uuidv4()}`)
   });
@@ -41,7 +38,6 @@ io.on('connection', socket => {
         socket.broadcast.to(roomId).emit('user-connected', userId);   
 
         socket.on('message', message => {
-          // io.to(roomId).emit('message', message)
           socket.broadcast.to(roomId).emit('message', message)
         })
 

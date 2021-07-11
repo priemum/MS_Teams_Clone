@@ -1,12 +1,11 @@
-<!-- kind of a html file -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microsoft Teams Clone</title>
+    <title>MS Teams</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
@@ -21,7 +20,6 @@
         const ROOM_ID = "<%= roomId %>";
     </script>
 </head>
-
 <body>
 
     <div class="myButtonPanel">    
@@ -32,7 +30,7 @@
         </div>
 
         <div class="blockForButtons first">
-            <div id="myBtn" class="functionalButtons">
+            <div id="myBtn" class="functionalButtons" title="Invite Link">
                 <i class="fas fa-user-plus"></i>
                 <span>Invite</span>
              </div>
@@ -42,7 +40,7 @@
                 <div class="modal-content">
                     <span class="close">&times;</span>
 
-                    <div class="copy-text">                    
+                    <div class="copyMeetLink">                    
                         <input type="text" class="text" value="Click to copy link to your clipboard" readonly>
                         <button onclick="copyLink()">
                         <i class="fa fa-clone"></i>
@@ -56,20 +54,14 @@
                     width: fit-content;
                     margin: 10px auto;
                     ">Share this meeting invite with others to join the room!</p>
-                    
-                                                       
+                                                           
                 </div>
             
             </div>
 
-            <!-- <div class="functionalButtons">
-               <i class="fas fa-user-friends"></i>
-               <span>Participants</span>
-            </div> -->
-
-            <div onclick="ShowChat(this)"  id="chat_Btn" class="functionalButtons" style="
-            padding-left: 8px;
-        ">
+            <div onclick="ShowChat(this)" title="Toggle Chat"  id="chat_Btn" class="functionalButtons" style="
+                padding-left: 10px;
+                ">
                 <i class="far fa-comment-dots"></i>
                 <span>Chat</span>
             </div>   
@@ -78,22 +70,22 @@
 
         <div class="blockForButtons last">
 
-            <div onclick="vidCamera()" class="functionalButtons myVidButton" >
+            <div onclick="vidCamera()" class="functionalButtons myVidButton" title="Hide Video">
                 <i class="fas fa-video"></i>
-                <span>Stop Video</span>
+                <span>Hide Video</span>
             </div>
 
-            <div onclick="myAudio()" class="functionalButtons myMuteButton">
+            <div onclick="myAudio()" class="functionalButtons myMuteButton" title="Mute">
                 <i class="fas fa-microphone"></i>
                 <span>Mute</span>
             </div>
 
-            <div id="share-screen" class="functionalButtons myShareButton" >
+            <div id="share-screen" class="functionalButtons myShareButton" title="Share Screen">
                 <i class="fas fa-share-square"></i>
                 <span>Share Screen</span>
             </div>
 
-            <div class="functionalButtons">
+            <div class="functionalButtons" title="Leave">
                 <button type="button" class="btn btn-danger  btn-sm">
                     
                     <a href="/left"
@@ -103,9 +95,9 @@
                     text-decoration:none;
                     "  
                     >Leave Call</a>  
-                    </button>
-                
+                </button>
             </div>
+
         </div>
     </div>
 
@@ -132,7 +124,9 @@
                 <i onclick="sendButton()" class="far fa-paper-plane"></i>
              </div>
         </div>
+
     </div>
+    
     <script src="room.js"></script>
 </body>
 </html>

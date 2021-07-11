@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    
+    <title>MS Teams</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
     <style>
         body { 
-            background-color: #e7dffb;            
+            background-color: white;             
             color: black;
         }
 
@@ -38,6 +38,7 @@
         }
 
         .wrapper{
+            background-color: #e7dffb;  
             right: 0;
             justify-content: center;
             text-align: center;
@@ -76,12 +77,12 @@
             bottom: 100%;
             left: 0;
             right: 0;
-            background-color: #6059d8;
-            opacity: 0.8;
+            background-color: #766de2;
+            opacity: 0.9;
             overflow: hidden;
             width: 100%;
             height:0;
-            transition: .5s ease;
+            transition: 1s ease;
         }
 
         .container:hover .overlay {
@@ -89,16 +90,17 @@
             height: 100%;
         }
 
-        .text {
+        .content {
             color: white;
-            font-size: 1.5em;
+            font-size: 1.1rem;
             position: absolute;
+            width: 80%;
+            text-align: left;
             top: 50%;
             left: 50%;
             -webkit-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-            text-align: center;
         }
 
     </style>
@@ -113,11 +115,14 @@
                 </div>
 
                 <div class="overlay">
-                    <div class="text">
+                    <div class="content">
                     <ul>
                         <li>Real-Time video meetings anytime-anywhere!</li>
-                        <li>Sharable meeting invites</li>
-                        <li>Supports in-call chat conversation</li>
+                        <li>Easy to use - No download, plug-in or login required.</li>
+                        <li>Create a room and get a sharable meeting invite.</li>
+                        <li>Share your audio, video & even your screen with others!</li>
+                        <li>Start chat conversation with participants inside the room!</li>
+                        <li>Total Privacy - The app collects no data or personal information. It stays just between the participants.</li>
                     </ul>
                     </div>
                 </div>
@@ -125,7 +130,7 @@
 
           
             <div class="wrapper col-sm-6">
-                <h2>Microsoft Teams Clone</h2>
+                <h2>Microsoft Teams</h2>
                 <button type="button" class="btn">
                     <i class="fas fa-plus">
                         <a href="/join"
