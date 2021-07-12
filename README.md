@@ -1,7 +1,7 @@
 # Microsoft Teams Clone
 
 ## About
-Real-time video calling application made using WebRTC, Socket.io, Node.js which creates rooms for meetings, provides quick `peer-to-peer` connectivity and supports various in-call features. 
+Real-time video calling application made using WebRTC, Socket.io, Node.js which creates rooms for meetings, provides quick `peer-to-peer` connectivity, and supports various in-call features. 
 
 ## Key-features
 * Toggle Video - to hide and show own video
@@ -37,7 +37,8 @@ nodemon server.js
 - Open `http://localhost:3030` in browser to view on port 3030.
 
 ## Deployment
-You can deploy the app on [Heroku](www.heroku.com)
+- You can deploy the app on [Heroku](www.heroku.com)
+- Run
 ```
 heroku login
 git add .
