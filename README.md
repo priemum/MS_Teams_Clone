@@ -38,7 +38,7 @@ nodemon server.js
 
 ## Deployment
 - You can deploy the app on [Heroku](www.heroku.com)
-- Run
+- Run-
 ```
 heroku login
 git add .
