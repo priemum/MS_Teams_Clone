@@ -11,7 +11,7 @@ This project was built as a part of [Microsoft Engage 2021](https://microsoft.ac
 
 ## About
 - Real-time video calling application that creates rooms for meetings,  provides quick `peer-to-peer` connectivity, and supports various in-call features. 
-- Agile Development Methodology used during this 4-week sprint - [Check here](https://drive.google.com/file/d/1tajH7qIWzjEBVpKkLsZorPewsdYaKKRw/view?usp=sharing)
+- How principles of Agile Methodology were used during this 4-week sprint - [Check here](https://drive.google.com/file/d/1tajH7qIWzjEBVpKkLsZorPewsdYaKKRw/view?usp=sharing)
 
 ## Key-features
 * Toggle Video - to hide and show own video
